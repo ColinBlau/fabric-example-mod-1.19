@@ -20,7 +20,7 @@ public class ColinWierdMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+	public static final Logger LOGGER = LoggerFactory.getLogger("cwierd");
 
 
 
@@ -31,7 +31,7 @@ public class ColinWierdMod implements ModInitializer {
 	 */
 
 	//initialise Sounds
-	public static final Identifier SECRET_MUSIC_ID = new Identifier("modid:secret_music");
+	public static final Identifier SECRET_MUSIC_ID = new Identifier("cwierd:secret_music");
 	public static SoundEvent SECRET_MUSIC_EVENT = SoundEvent.of(SECRET_MUSIC_ID);
 
 
