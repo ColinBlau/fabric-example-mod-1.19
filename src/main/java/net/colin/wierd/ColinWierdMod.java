@@ -26,7 +26,7 @@ public class ColinWierdMod implements ModInitializer {
 
 	//initialise Items
 	/*public static final Item tastelessBrick =
-			Registry.register(Registries.ITEM, new Identifier("wtf","tasteless_brick"),
+			Registry.register(Registries.ITEM, new Identifier("cwierd","tasteless_brick"),
 			new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6F).build())));
 	 */
 
@@ -37,16 +37,16 @@ public class ColinWierdMod implements ModInitializer {
 
 	//register Items (those who are initialised in their separate classes)
 	public static final Item THE_BUG =
-			Registry.register(Registries.ITEM, new Identifier("wtf", "the_bug"),
+			Registry.register(Registries.ITEM, new Identifier("cwierd", "the_bug"),
 					new TheBug(new FabricItemSettings()));
 
 	public static final Item TASTELESS_BRICK =
-			Registry.register(Registries.ITEM, new Identifier("wtf", "tasteless_brick"),
+			Registry.register(Registries.ITEM, new Identifier("cwierd", "tasteless_brick"),
 					new TastelessBrick(new FabricItemSettings()));
 	// TODO: 5/20/2023 not working currently: MusicDiscItem can be put into Juke Box but nothing happens after that -> no music
 
 	public static final Item SUSPICIOUS_BEEF =
-			Registry.register(Registries.ITEM, new Identifier("wtf", "suspicious_beef"),
+			Registry.register(Registries.ITEM, new Identifier("cwierd", "suspicious_beef"),
 					new SuspiciousBeef(7, SECRET_MUSIC_EVENT, new FabricItemSettings().maxCount(1), 139));
 
 
@@ -55,11 +55,11 @@ public class ColinWierdMod implements ModInitializer {
 			new TrollingTable(FabricBlockSettings.of(Material.WOOD).strength(2.5f));
 
 	//initialise ItemGroups
-	private static final ItemGroup COLINS_WIERD_SHIT = FabricItemGroup.builder(new Identifier("wtf", "wierd_shit"))
+	private static final ItemGroup COLINS_WIERD_SHIT = FabricItemGroup.builder(new Identifier("cwierd", "wierd_shit"))
 			.icon(() -> new ItemStack(TASTELESS_BRICK))
 			.build();
 
-	private static final ItemGroup NOT_FUNCTIONAL = FabricItemGroup.builder(new Identifier("wtf", "not_functional"))
+	private static final ItemGroup NOT_FUNCTIONAL = FabricItemGroup.builder(new Identifier("cwierd", "not_functional"))
 			.icon(() -> new ItemStack(THE_BUG))
 			.build();
 
@@ -76,8 +76,8 @@ public class ColinWierdMod implements ModInitializer {
 		Registry.register(Registries.SOUND_EVENT, net.colin.wierd.ColinWierdMod.SECRET_MUSIC_ID, SECRET_MUSIC_EVENT);
 
 		//register blocks
-		Registry.register(Registries.BLOCK, new Identifier("wtf", "trolling_table"), TROLLING_TABLE);
-		Registry.register(Registries.ITEM, new Identifier("wtf", "trolling_table"), new BlockItem(TROLLING_TABLE, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("cwierd", "trolling_table"), TROLLING_TABLE);
+		Registry.register(Registries.ITEM, new Identifier("cwierd", "trolling_table"), new BlockItem(TROLLING_TABLE, new FabricItemSettings()));
 
 		//register ItemGroups
 		ItemGroupEvents.modifyEntriesEvent(COLINS_WIERD_SHIT).register(content -> {

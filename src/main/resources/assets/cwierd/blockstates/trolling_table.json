@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "wtf:block/trolling_table"
+      "model": "cwierd:block/trolling_table"
     }
   }
 }
